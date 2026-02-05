@@ -1,0 +1,154 @@
+﻿desc,code,ref,created_by,created_date
+N/A,0,No Information,1,2021-05-04 00:00:00
+,0,Medicine,1,2021-05-04 00:00:00
+GENERAL MEDICINE,0,General Medicine,1,2021-05-04 00:00:00
+CARDIOLOGY,0,Cardiology,1,2021-05-04 00:00:00
+,0,Clinical Haematology,1,2021-05-04 00:00:00
+DERMATOLOGY,0,Dermatology,1,2021-05-04 00:00:00
+,0,Endocrinology,1,2021-05-04 00:00:00
+GASTROENTEROLOGY,0,Gastroenterology,1,2021-05-04 00:00:00
+,0,Geriatric,1,2021-05-04 00:00:00
+,0,Hepatology,1,2021-05-04 00:00:00
+,0,Infectious Disease,1,2021-05-04 00:00:00
+INTERNAL MEDICINE,0,Advanced Internal Medicine,1,2021-05-04 00:00:00
+,0,Medical Oncology,1,2021-05-04 00:00:00
+NEPHROLOGY,0,Nephrology,1,2021-05-04 00:00:00
+NEUROLOGY,0,Neurology,1,2021-05-04 00:00:00
+,0,Palliative Care,1,2021-05-04 00:00:00
+,0,Respiratory Medicine,1,2021-05-04 00:00:00
+,0,Rheumatology,1,2021-05-04 00:00:00
+,0,Surgery,1,2021-05-04 00:00:00
+GENERAL SURGERY,0,General Surgery,1,2021-05-04 00:00:00
+,0,Breast & Endocrine Surgery,1,2021-05-04 00:00:00
+,0,Burns & Trauma Surgery,1,2021-05-04 00:00:00
+,0,Cardiothoracic Surgery,1,2021-05-04 00:00:00
+,0,Colorectal Surgery,1,2021-05-04 00:00:00
+,0,Surgical Oncology,1,2021-05-04 00:00:00
+,0,Hepatopancreaticobiliary (HPB) Surgery,1,2021-05-04 00:00:00
+NEURO SURGERY,0,Neurosurgery,1,2021-05-04 00:00:00
+,0,Paediatric Surgery,1,2021-05-04 00:00:00
+PLASTIC SURGERY,0,Plastic & Reconstructive Surgery ,1,2021-05-04 00:00:00
+,0,Thoracic Surgery,1,2021-05-04 00:00:00
+,0,Upper Gastrointestinal Surgery,1,2021-05-04 00:00:00
+UROLOGY,0,Urology,1,2021-05-04 00:00:00
+,0,Vascular Surgery,1,2021-05-04 00:00:00
+OBSTETRICS & GYNAECOLOGY,0,Obstetrics & Gynaecology,1,2021-05-04 00:00:00
+,0,General Obstetrics & Gynaecology,1,2021-05-04 00:00:00
+,0,Obstetrics,1,2021-05-04 00:00:00
+,0,Gynaecology,1,2021-05-04 00:00:00
+,0,Gynae-oncology,1,2021-05-04 00:00:00
+,0,Maternal Fetal Medicine,1,2021-05-04 00:00:00
+,0,Reproductive Medicine,1,2021-05-04 00:00:00
+,0,Urogynaecology,1,2021-05-04 00:00:00
+PAEDIATRIC,0,Paediatrics,1,2021-05-04 00:00:00
+,0,General Paediatrics,1,2021-05-04 00:00:00
+,0,Adolescent Medicine,1,2021-05-04 00:00:00
+,0,Developmental Paeds,1,2021-05-04 00:00:00
+,0,Clinical Genetics,1,2021-05-04 00:00:00
+,0,Neonatology,1,2021-05-04 00:00:00
+,0,Paediatric Cardiology,1,2021-05-04 00:00:00
+,0,Paediatric Palliative Medicine,1,2021-05-04 00:00:00
+,0,Paediatric Dermatology,1,2021-05-04 00:00:00
+,0,Paediatric Emergency Medicine,1,2021-05-04 00:00:00
+,0,Paediatric Endocrine,1,2021-05-04 00:00:00
+,0,Paediatric Gastroenterology,1,2021-05-04 00:00:00
+,0,Paediatric Haemato-oncology,1,2021-05-04 00:00:00
+,0,Paediatric Infectious Diseases,1,2021-05-04 00:00:00
+,0,Paediatric Intensive Care,1,2021-05-04 00:00:00
+,0,Paediatric Rheumatology,1,2021-05-04 00:00:00
+,0,Paediatrics Nephrology,1,2021-05-04 00:00:00
+PAEDIATRIC NEUROLOGIST,0,Paediatrics Neurology,1,2021-05-04 00:00:00
+,0,Paediatrics Respiratory Medicine,1,2021-05-04 00:00:00
+ORTHOPAEDIC,0,General Orthopaedics,1,2021-05-04 00:00:00
+,0,Joint Arthroplasty,1,2021-05-04 00:00:00
+,0,Arthroscopy & Sports Surgery,1,2021-05-04 00:00:00
+,0,Advanced Musculoskeletal Trauma,1,2021-05-04 00:00:00
+,0,Foot & Ankle Surgery,1,2021-05-04 00:00:00
+,0,Oncology Orthopaedic ,1,2021-05-04 00:00:00
+,0,Paediatric Orthopaedic,1,2021-05-04 00:00:00
+,0,Spine Surgery,1,2021-05-04 00:00:00
+,0,"Upper Limb, Hand  & Microsurgery",1,2021-05-04 00:00:00
+OPHTHALMOLOGY,0,General Ophthalmology,1,2021-05-04 00:00:00
+,0,Cornea,1,2021-05-04 00:00:00
+,0,Neuro Ophthalmology,1,2021-05-04 00:00:00
+,0,Glaucoma,1,2021-05-04 00:00:00
+,0,Medical Retinal,1,2021-05-04 00:00:00
+,0,Oculoplastic Surgery,1,2021-05-04 00:00:00
+,0,Paediatric Ophthalmology,1,2021-05-04 00:00:00
+,0,Vitreoretinal,1,2021-05-04 00:00:00
+,0,Otorhinolaryngology,1,2021-05-04 00:00:00
+,0,General Otorhinolaryngology,1,2021-05-04 00:00:00
+,0,Head & Neck Surgery,1,2021-05-04 00:00:00
+,0,Otology/Skull Based Surgery,1,2021-05-04 00:00:00
+,0,Paediatric ORL,1,2021-05-04 00:00:00
+,0,Rhinology,1,2021-05-04 00:00:00
+,0,Psychiatry,1,2021-05-04 00:00:00
+,0,General Psychiatry,1,2021-05-04 00:00:00
+,0,Child & Adolescent Psychiatry,1,2021-05-04 00:00:00
+,0,Addiction & Substance Abuse,1,2021-05-04 00:00:00
+,0,Community & Rehab Psychiatry,1,2021-05-04 00:00:00
+,0,Forensic Psychiatry,1,2021-05-04 00:00:00
+,0,Liaison Psychiatry,1,2021-05-04 00:00:00
+,0,Neuropsychiatry,1,2021-05-04 00:00:00
+,0,Psychogeriatrics,1,2021-05-04 00:00:00
+,0,Rehabilitation Medicine,1,2021-05-04 00:00:00
+NUCLEAR MEDICINE,0,Nuclear Medicine,1,2021-05-04 00:00:00
+,0,Radiotherapy/Clinical Oncology,1,2021-05-04 00:00:00
+,0,Oral Health,1,2021-05-04 00:00:00
+,0,General Rehabilitation Medicine,1,2021-05-04 00:00:00
+,0,General Nuclear Medicine,1,2021-05-04 00:00:00
+RADIATION ONCOLOGY,0,General Radiotherapy/Clinical Oncology,1,2021-05-04 00:00:00
+DENTISTRY,0,Dental Special Care (Special Needs Dentistry),1,2021-05-04 00:00:00
+,0,Forensic Dental,1,2021-05-04 00:00:00
+,0,Oral Pathology/Medicine,1,2021-05-04 00:00:00
+,0,Oral Surgery,1,2021-05-04 00:00:00
+,0,Paediatric Dental,1,2021-05-04 00:00:00
+,0,Emergency Medicine,1,2021-05-04 00:00:00
+,0,Sports Medicine,1,2021-05-04 00:00:00
+ANAESTHESIOLOGY,0,Anaesthesiology,1,2021-05-04 00:00:00
+,0,General Emergency Medicine,1,2021-05-04 00:00:00
+,0,General Sports Medicine,1,2021-05-04 00:00:00
+,0,General Anaesthesiology,1,2021-05-04 00:00:00
+,0,Obstetric Anaesthesia,1,2021-05-04 00:00:00
+,0,Paediatric Anaesthesia,1,2021-05-04 00:00:00
+,0,Adult Intensive Care,1,2021-05-04 00:00:00
+,0,Cardiac Anaesthesia,1,2021-05-04 00:00:00
+,0,Neuroanaesthesia & Trauma,1,2021-05-04 00:00:00
+,0,Pain Management,1,2021-05-04 00:00:00
+PATHOLOGY,0,Pathology,1,2021-05-04 00:00:00
+,0,Anatomical Pathology (Histhopathology),1,2021-05-04 00:00:00
+,0,Chemical Pathology,1,2021-05-04 00:00:00
+HAEMATOLOGIST,0,Haematology,1,2021-05-04 00:00:00
+,0,Medical Microbiology,1,2021-05-04 00:00:00
+,0,Transfusion Medicine,1,2021-05-04 00:00:00
+,0,Radiology,1,2021-05-04 00:00:00
+,0,General Transfusion Medicine,1,2021-05-04 00:00:00
+,0,General Radiology,1,2021-05-04 00:00:00
+,0,Interventional Radiology,1,2021-05-04 00:00:00
+,0,Paediatric Radiology,1,2021-05-04 00:00:00
+,0,Breast & Endocrine ,1,2021-05-04 00:00:00
+,0,Cardiac Radiology,1,2021-05-04 00:00:00
+,0,Gastro Hepatobiliary,1,2021-05-04 00:00:00
+,0,Uroradiology,1,2021-05-04 00:00:00
+,0,Musculoskeletal Radiology,1,2021-05-04 00:00:00
+,0,Women's Imaging,1,2021-05-04 00:00:00
+,0,Forensic Radiology,1,2021-05-04 00:00:00
+,0,Neuroradiology,1,2021-05-04 00:00:00
+,0,General Forensic Medicine,1,2021-05-04 00:00:00
+,0,Clinical Forensic Medicine,1,2021-05-04 00:00:00
+,0,Forensic Anthropology,1,2021-05-04 00:00:00
+,0,Forensic Pathology,1,2021-05-04 00:00:00
+,0,Forensic Toxicology,1,2021-05-04 00:00:00
+,0,General Multi Disciplines,1,2021-05-04 00:00:00
+,0,Forensic Medicine,1,2021-05-04 00:00:00
+,0,Multi Disciplines,1,2021-05-04 00:00:00
+AESTHETIC MEDICINE,0,AESTHETIC MEDICINE ,1,2021-05-04 00:00:00
+CARDIOTHORACOVASCULAR SURGERY,0,CARDIOTHORACOVASCULAR SURGERY ,1,2021-05-04 00:00:00
+DIAGNOSTIC IMAGING,0,DIAGNOSTIC IMAGING ,1,2021-05-04 00:00:00
+EMERGENCY MEDICINE,0,EMERGENCY MEDICINE ,1,2021-05-04 00:00:00
+ENT,0,ENT ,1,2021-05-04 00:00:00
+GENERAL PRACTITIONER,0,GENERAL PRACTITIONER ,1,2021-05-04 00:00:00
+PERFUSIONIST,0,PERFUSIONIST ,1,2021-05-04 00:00:00
+PHYSIOTHERAPY,0,PHYSIOTHERAPY ,1,2021-05-04 00:00:00
+PSYCHIATRIC,0,PSYCHIATRIC ,1,2021-05-04 00:00:00
+PULMONARY,0,PULMONARY ,1,2021-05-04 00:00:00

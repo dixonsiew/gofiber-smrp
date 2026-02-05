@@ -1,0 +1,448 @@
+﻿desc,code,ref,created_by,created_date
+N/A,0,No Information,1,2021-05-04 00:00:00
+Kangar,1,Kangar,1,2021-05-04 00:00:00
+Kuala Perlis,2,Kuala Perlis,1,2021-05-04 00:00:00
+Padang Besar,3,Padang Besar,1,2021-05-04 00:00:00
+Kaki Bukit,4,Kaki Bukit,1,2021-05-04 00:00:00
+Arau,5,Arau,1,2021-05-04 00:00:00
+Simpang Ampat,6,Simpang Ampat,1,2021-05-04 00:00:00
+Alor Setar,7,Alor Setar,1,2021-05-04 00:00:00
+Jitra,8,Jitra,1,2021-05-04 00:00:00
+Changloon,9,Changloon,1,2021-05-04 00:00:00
+Universiti Utara Malaysia,10,Universiti Utara Malaysia,1,2021-05-04 00:00:00
+Bukit Kayu Hitam,11,Bukit Kayu Hitam,1,2021-05-04 00:00:00
+Kodiang,12,Kodiang,1,2021-05-04 00:00:00
+Ayer Hitam,13,Ayer Hitam,1,2021-05-04 00:00:00
+Kepala Batas,14,Kepala Batas,1,2021-05-04 00:00:00
+Kuala Nerang,15,Kuala Nerang,1,2021-05-04 00:00:00
+Pokok Sena,16,Pokok Sena,1,2021-05-04 00:00:00
+Langgar,17,Langgar,1,2021-05-04 00:00:00
+Kuala Kedah,18,Kuala Kedah,1,2021-05-04 00:00:00
+Simpang Empat,19,Simpang Empat,1,2021-05-04 00:00:00
+Pendang,20,Pendang,1,2021-05-04 00:00:00
+Kota Sarang Semut,21,Kota Sarang Semut,1,2021-05-04 00:00:00
+Yan,22,Yan,1,2021-05-04 00:00:00
+Langkawi,23,Langkawi,1,2021-05-04 00:00:00
+Sungai Petani,24,Sungai Petani,1,2021-05-04 00:00:00
+Bedong,25,Bedong,1,2021-05-04 00:00:00
+Sik,26,Sik,1,2021-05-04 00:00:00
+Gurun,27,Gurun,1,2021-05-04 00:00:00
+Jeniang,28,Jeniang,1,2021-05-04 00:00:00
+Merbok,29,Merbok,1,2021-05-04 00:00:00
+Kota Kuala Muda,30,Kota Kuala Muda,1,2021-05-04 00:00:00
+Kulim,31,Kulim,1,2021-05-04 00:00:00
+Baling,32,Baling,1,2021-05-04 00:00:00
+Kuala Pegang,33,Kuala Pegang,1,2021-05-04 00:00:00
+Kupang,34,Kupang,1,2021-05-04 00:00:00
+Kuala Ketil,35,Kuala Ketil,1,2021-05-04 00:00:00
+Padang Serai,36,Padang Serai,1,2021-05-04 00:00:00
+Lunas,37,Lunas,1,2021-05-04 00:00:00
+Karangan,39,Karangan,1,2021-05-04 00:00:00
+Serdang,40,Serdang,1,2021-05-04 00:00:00
+Pulau Pinang,41,Pulau Pinang,1,2021-05-04 00:00:00
+Balik Pulau,42,Balik Pulau,1,2021-05-04 00:00:00
+Batu Ferringhi,43,Batu Ferringhi,1,2021-05-04 00:00:00
+Tanjong Bungah,44,Tanjong Bungah,1,2021-05-04 00:00:00
+Tanjung Bungah,45,Tanjung Bungah,1,2021-05-04 00:00:00
+Penang Hill,46,Penang Hill,1,2021-05-04 00:00:00
+Ayer Itam,47,Ayer Itam,1,2021-05-04 00:00:00
+Jelutong,48,Jelutong,1,2021-05-04 00:00:00
+Gelugor,49,Gelugor,1,2021-05-04 00:00:00
+USM Pulau Pinang,50,USM Pulau Pinang,1,2021-05-04 00:00:00
+Bayan Lepas,51,Bayan Lepas,1,2021-05-04 00:00:00
+Batu Maung,52,Batu Maung,1,2021-05-04 00:00:00
+Butterworth,53,Butterworth,1,2021-05-04 00:00:00
+Penaga,54,Penaga,1,2021-05-04 00:00:00
+Kepala Batas,55,Kepala Batas,1,2021-05-04 00:00:00
+Tasek Gelugor,56,Tasek Gelugor,1,2021-05-04 00:00:00
+Tasek Gelugur,57,Tasek Gelugur,1,2021-05-04 00:00:00
+Permatang Pauh,58,Permatang Pauh,1,2021-05-04 00:00:00
+Perai,59,Perai,1,2021-05-04 00:00:00
+Bukit Mertajam,60,Bukit Mertajam,1,2021-05-04 00:00:00
+Simpang Ampat,61,Simpang Ampat,1,2021-05-04 00:00:00
+Sungai Jawi,62,Sungai Jawi,1,2021-05-04 00:00:00
+Bandar Baharu,63,Bandar Baharu,1,2021-05-04 00:00:00
+Nibong Tebal,64,Nibong Tebal,1,2021-05-04 00:00:00
+Kubang Semang,65,Kubang Semang,1,2021-05-04 00:00:00
+Kota Bharu,66,Kota Bharu,1,2021-05-04 00:00:00
+Bachok,67,Bachok,1,2021-05-04 00:00:00
+Wakaf Bharu,68,Wakaf Bharu,1,2021-05-04 00:00:00
+Tumpat,69,Tumpat,1,2021-05-04 00:00:00
+Melor,70,Melor,1,2021-05-04 00:00:00
+Ketereh,71,Ketereh,1,2021-05-04 00:00:00
+Kem Desa Pahlawan,72,Kem Desa Pahlawan,1,2021-05-04 00:00:00
+Pulai Chondong,73,Pulai Chondong,1,2021-05-04 00:00:00
+Cherang Ruku,74,Cherang Ruku,1,2021-05-04 00:00:00
+Pasir Puteh,75,Pasir Puteh,1,2021-05-04 00:00:00
+Selising,76,Selising,1,2021-05-04 00:00:00
+Pasir Mas,77,Pasir Mas,1,2021-05-04 00:00:00
+Rantau Panjang,78,Rantau Panjang,1,2021-05-04 00:00:00
+Tanah Merah,79,Tanah Merah,1,2021-05-04 00:00:00
+Jeli,80,Jeli,1,2021-05-04 00:00:00
+Kuala Balah,81,Kuala Balah,1,2021-05-04 00:00:00
+Ayer Lanas,82,Ayer Lanas,1,2021-05-04 00:00:00
+Kuala Krai,83,Kuala Krai,1,2021-05-04 00:00:00
+Dabong,84,Dabong,1,2021-05-04 00:00:00
+Gua Musang,85,Gua Musang,1,2021-05-04 00:00:00
+Temangan,86,Temangan,1,2021-05-04 00:00:00
+Machang,87,Machang,1,2021-05-04 00:00:00
+Kuala Terengganu,88,Kuala Terengganu,1,2021-05-04 00:00:00
+Bukit Payong,89,Bukit Payong,1,2021-05-04 00:00:00
+Chalok,90,Chalok,1,2021-05-04 00:00:00
+Sungai Tong,91,Sungai Tong,1,2021-05-04 00:00:00
+Marang,92,Marang,1,2021-05-04 00:00:00
+Kuala Berang,93,Kuala Berang,1,2021-05-04 00:00:00
+Ajil,94,Ajil,1,2021-05-04 00:00:00
+Jerteh,95,Jerteh,1,2021-05-04 00:00:00
+Permaisuri,96,Permaisuri,1,2021-05-04 00:00:00
+Kampung Raja,97,Kampung Raja,1,2021-05-04 00:00:00
+Kuala Besut,98,Kuala Besut,1,2021-05-04 00:00:00
+Dungun,99,Dungun,1,2021-05-04 00:00:00
+Paka,100,Paka,1,2021-05-04 00:00:00
+Bukit Besi,101,Bukit Besi,1,2021-05-04 00:00:00
+Ketengah Jaya,102,Ketengah Jaya,1,2021-05-04 00:00:00
+Al Muktatfi Billah Shah,103,Al Muktatfi Billah Shah,1,2021-05-04 00:00:00
+Cukai,104,Cukai,1,2021-05-04 00:00:00
+Ayer Puteh,105,Ayer Puteh,1,2021-05-04 00:00:00
+Ceneh,106,Ceneh,1,2021-05-04 00:00:00
+Kijal,107,Kijal,1,2021-05-04 00:00:00
+Kemasek,108,Kemasek,1,2021-05-04 00:00:00
+Kerteh,109,Kerteh,1,2021-05-04 00:00:00
+Kuantan,110,Kuantan,1,2021-05-04 00:00:00
+Bukit Goh,112,Bukit Goh,1,2021-05-04 00:00:00
+Balok,113,Balok,1,2021-05-04 00:00:00
+Sungai Lembing,114,Sungai Lembing,1,2021-05-04 00:00:00
+Gambang,115,Gambang,1,2021-05-04 00:00:00
+Bandar Pusat Jengka,116,Bandar Pusat Jengka,1,2021-05-04 00:00:00
+Maran,117,Maran,1,2021-05-04 00:00:00
+Pekan,118,Pekan,1,2021-05-04 00:00:00
+Chini,119,Chini,1,2021-05-04 00:00:00
+Muadzam Shah,120,Muadzam Shah,1,2021-05-04 00:00:00
+Kuala Rompin,121,Kuala Rompin,1,2021-05-04 00:00:00
+Bandar Tun Abdul Razak,122,Bandar Tun Abdul Razak,1,2021-05-04 00:00:00
+Jerantut,123,Jerantut,1,2021-05-04 00:00:00
+Damak,124,Damak,1,2021-05-04 00:00:00
+Padang Tengku,125,Padang Tengku,1,2021-05-04 00:00:00
+Kuala Lipis,126,Kuala Lipis,1,2021-05-04 00:00:00
+Benta,127,Benta,1,2021-05-04 00:00:00
+Dong,128,Dong,1,2021-05-04 00:00:00
+Raub,129,Raub,1,2021-05-04 00:00:00
+Sungai Koyan,130,Sungai Koyan,1,2021-05-04 00:00:00
+Sega,131,Sega,1,2021-05-04 00:00:00
+Temerloh,132,Temerloh,1,2021-05-04 00:00:00
+Kuala Krau,133,Kuala Krau,1,2021-05-04 00:00:00
+Chenor,134,Chenor,1,2021-05-04 00:00:00
+Triang,135,Triang,1,2021-05-04 00:00:00
+Bandar Bera,136,Bandar Bera,1,2021-05-04 00:00:00
+Kemayan,137,Kemayan,1,2021-05-04 00:00:00
+Mentakab,138,Mentakab,1,2021-05-04 00:00:00
+Lanchang,139,Lanchang,1,2021-05-04 00:00:00
+Karak,140,Karak,1,2021-05-04 00:00:00
+Bentong,141,Bentong,1,2021-05-04 00:00:00
+Lurah Bilut,142,Lurah Bilut,1,2021-05-04 00:00:00
+Ipoh,143,Ipoh,1,2021-05-04 00:00:00
+Batu Gajah,144,Batu Gajah,1,2021-05-04 00:00:00
+Sungai Siput,145,Sungai Siput,1,2021-05-04 00:00:00
+Ulu Kinta,146,Ulu Kinta,1,2021-05-04 00:00:00
+Chemor,147,Chemor,1,2021-05-04 00:00:00
+Tanjong Rambutan,148,Tanjong Rambutan,1,2021-05-04 00:00:00
+Kampung Kepayang,149,Kampung Kepayang,1,2021-05-04 00:00:00
+Pusing,150,Pusing,1,2021-05-04 00:00:00
+Gopeng,151,Gopeng,1,2021-05-04 00:00:00
+Malim Nawar,152,Malim Nawar,1,2021-05-04 00:00:00
+Tronoh,153,Tronoh,1,2021-05-04 00:00:00
+Tanjong Tualang,154,Tanjong Tualang,1,2021-05-04 00:00:00
+Jeram,155,Jeram,1,2021-05-04 00:00:00
+Kampar,156,Kampar,1,2021-05-04 00:00:00
+Sitiawan,157,Sitiawan,1,2021-05-04 00:00:00
+Seri Manjong,158,Seri Manjong,1,2021-05-04 00:00:00
+Seri Manjung,159,Seri Manjung,1,2021-05-04 00:00:00
+TLDM Lumut,160,TLDM Lumut,1,2021-05-04 00:00:00
+Lumut,161,Lumut,1,2021-05-04 00:00:00
+Pangkor,162,Pangkor,1,2021-05-04 00:00:00
+Ayer Tawar,163,Ayer Tawar,1,2021-05-04 00:00:00
+Changkat Keruing,164,Changkat Keruing,1,2021-05-04 00:00:00
+Bota,165,Bota,1,2021-05-04 00:00:00
+Bandar Seri Iskandar,166,Bandar Seri Iskandar,1,2021-05-04 00:00:00
+Bruas,167,Bruas,1,2021-05-04 00:00:00
+Parit,168,Parit,1,2021-05-04 00:00:00
+Lambor Kanan,169,Lambor Kanan,1,2021-05-04 00:00:00
+Kuala Kangsar,170,Kuala Kangsar,1,2021-05-04 00:00:00
+Pengkalan Hulu,171,Pengkalan Hulu,1,2021-05-04 00:00:00
+Intan,172,Intan,1,2021-05-04 00:00:00
+Gerik,173,Gerik,1,2021-05-04 00:00:00
+Lenggong,174,Lenggong,1,2021-05-04 00:00:00
+Sauk,175,Sauk,1,2021-05-04 00:00:00
+Enggor,176,Enggor,1,2021-05-04 00:00:00
+Padang Rengas,177,Padang Rengas,1,2021-05-04 00:00:00
+Manong,178,Manong,1,2021-05-04 00:00:00
+Taiping,179,Taiping,1,2021-05-04 00:00:00
+Selama,180,Selama,1,2021-05-04 00:00:00
+Rantau Panjang,181,Rantau Panjang,1,2021-05-04 00:00:00
+Parit Buntar,182,Parit Buntar,1,2021-05-04 00:00:00
+Tanjong Piandang,183,Tanjong Piandang,1,2021-05-04 00:00:00
+Bagan Serai,184,Bagan Serai,1,2021-05-04 00:00:00
+Kuala Kurau,185,Kuala Kurau,1,2021-05-04 00:00:00
+Simpang Ampat Semanggol,186,Simpang Ampat Semanggol,1,2021-05-04 00:00:00
+Batu Kurau,187,Batu Kurau,1,2021-05-04 00:00:00
+Kamunting,188,Kamunting,1,2021-05-04 00:00:00
+Kuala Sepetang,189,Kuala Sepetang,1,2021-05-04 00:00:00
+Simpang,190,Simpang,1,2021-05-04 00:00:00
+Matang,191,Matang,1,2021-05-04 00:00:00
+Trong,192,Trong,1,2021-05-04 00:00:00
+Changkat Jering,193,Changkat Jering,1,2021-05-04 00:00:00
+Pantai Remis,194,Pantai Remis,1,2021-05-04 00:00:00
+Tapah,195,Tapah,1,2021-05-04 00:00:00
+Chenderiang,196,Chenderiang,1,2021-05-04 00:00:00
+Temoh,197,Temoh,1,2021-05-04 00:00:00
+Tapah Road,198,Tapah Road,1,2021-05-04 00:00:00
+Bidor,199,Bidor,1,2021-05-04 00:00:00
+Sungkai,200,Sungkai,1,2021-05-04 00:00:00
+Trolak,201,Trolak,1,2021-05-04 00:00:00
+Slim River,202,Slim River,1,2021-05-04 00:00:00
+Tanjong Malim,203,Tanjong Malim,1,2021-05-04 00:00:00
+Behrang Stesen,204,Behrang Stesen,1,2021-05-04 00:00:00
+Teluk Intan,205,Teluk Intan,1,2021-05-04 00:00:00
+Bagan Datoh,206,Bagan Datoh,1,2021-05-04 00:00:00
+Selekoh,207,Selekoh,1,2021-05-04 00:00:00
+Sungai Sumun,208,Sungai Sumun,1,2021-05-04 00:00:00
+Hutan Melintang,209,Hutan Melintang,1,2021-05-04 00:00:00
+Ulu Bernam,210,Ulu Bernam,1,2021-05-04 00:00:00
+Chenderong Balai,211,Chenderong Balai,1,2021-05-04 00:00:00
+Langkap,212,Langkap,1,2021-05-04 00:00:00
+Chikus,213,Chikus,1,2021-05-04 00:00:00
+Kampung Gajah,214,Kampung Gajah,1,2021-05-04 00:00:00
+Tanah Rata,215,Tanah Rata,1,2021-05-04 00:00:00
+Brinchang,216,Brinchang,1,2021-05-04 00:00:00
+Ringlet,217,Ringlet,1,2021-05-04 00:00:00
+Shah Alam,218,Shah Alam,1,2021-05-04 00:00:00
+Klang,220,Klang,1,2021-05-04 00:00:00
+Pelabuhan Klang,221,Pelabuhan Klang,1,2021-05-04 00:00:00
+Kapar,222,Kapar,1,2021-05-04 00:00:00
+Bandar Puncak Alam,223,Bandar Puncak Alam,1,2021-05-04 00:00:00
+Telok Panglima Garang,224,Telok Panglima Garang,1,2021-05-04 00:00:00
+Jenjarom,225,Jenjarom,1,2021-05-04 00:00:00
+Banting,226,Banting,1,2021-05-04 00:00:00
+Tanjong Sepat,227,Tanjong Sepat,1,2021-05-04 00:00:00
+Pulau Indah,228,Pulau Indah,1,2021-05-04 00:00:00
+Pulau Ketam,229,Pulau Ketam,1,2021-05-04 00:00:00
+Pulau Carey,230,Pulau Carey,1,2021-05-04 00:00:00
+Kajang,231,Kajang,1,2021-05-04 00:00:00
+Hulu Langat,232,Hulu Langat,1,2021-05-04 00:00:00
+Cheras,233,Cheras,1,2021-05-04 00:00:00
+Seri Kembangan,234,Seri Kembangan,1,2021-05-04 00:00:00
+Serdang,235,Serdang,1,2021-05-04 00:00:00
+Semenyih,236,Semenyih,1,2021-05-04 00:00:00
+Bandar Baru Bangi,237,Bandar Baru Bangi,1,2021-05-04 00:00:00
+Beranang,238,Beranang,1,2021-05-04 00:00:00
+Dengkil,239,Dengkil,1,2021-05-04 00:00:00
+Sepang,240,Sepang,1,2021-05-04 00:00:00
+Sungai Pelek,241,Sungai Pelek,1,2021-05-04 00:00:00
+Kuala Kubu Baru,242,Kuala Kubu Baru,1,2021-05-04 00:00:00
+Kerling,243,Kerling,1,2021-05-04 00:00:00
+Rasa,244,Rasa,1,2021-05-04 00:00:00
+Batang Kali,245,Batang Kali,1,2021-05-04 00:00:00
+Batangkali,246,Batangkali,1,2021-05-04 00:00:00
+Kuala Selangor,247,Kuala Selangor,1,2021-05-04 00:00:00
+Sungai Ayer Tawar,248,Sungai Ayer Tawar,1,2021-05-04 00:00:00
+Sabak Bernam,249,Sabak Bernam,1,2021-05-04 00:00:00
+Sungai Besar,250,Sungai Besar,1,2021-05-04 00:00:00
+Sekinchan,251,Sekinchan,1,2021-05-04 00:00:00
+Tanjong Karang,252,Tanjong Karang,1,2021-05-04 00:00:00
+Batang Berjuntai,253,Batang Berjuntai,1,2021-05-04 00:00:00
+Bukit Rotan,254,Bukit Rotan,1,2021-05-04 00:00:00
+Jeram,255,Jeram,1,2021-05-04 00:00:00
+Petaling Jaya,256,Petaling Jaya,1,2021-05-04 00:00:00
+Sungai Buloh,257,Sungai Buloh,1,2021-05-04 00:00:00
+Puchong,258,Puchong,1,2021-05-04 00:00:00
+Subang Jaya,259,Subang Jaya,1,2021-05-04 00:00:00
+Rawang,260,Rawang,1,2021-05-04 00:00:00
+Batu Arang,261,Batu Arang,1,2021-05-04 00:00:00
+Serendah,262,Serendah,1,2021-05-04 00:00:00
+Bukit Fraser,263,Bukit Fraser,1,2021-05-04 00:00:00
+Kuala Lumpur,264,Kuala Lumpur,1,2021-05-04 00:00:00
+Sungai Besi,265,Sungai Besi,1,2021-05-04 00:00:00
+Putrajaya,266,Putrajaya,1,2021-05-04 00:00:00
+Cyberjaya,267,Cyberjaya,1,2021-05-04 00:00:00
+KLIA,268,KLIA,1,2021-05-04 00:00:00
+Ampang,269,Ampang,1,2021-05-04 00:00:00
+Batu Caves,270,Batu Caves,1,2021-05-04 00:00:00
+Genting Highlands,271,Genting Highlands,1,2021-05-04 00:00:00
+Seremban,272,Seremban,1,2021-05-04 00:00:00
+Port Dickson,274,Port Dickson,1,2021-05-04 00:00:00
+Si Rusa,275,Si Rusa,1,2021-05-04 00:00:00
+Rantau,276,Rantau,1,2021-05-04 00:00:00
+Linggi,277,Linggi,1,2021-05-04 00:00:00
+Rembau,278,Rembau,1,2021-05-04 00:00:00
+Kota,279,Kota,1,2021-05-04 00:00:00
+Tanjong Ipoh,280,Tanjong Ipoh,1,2021-05-04 00:00:00
+Kuala Klawang,281,Kuala Klawang,1,2021-05-04 00:00:00
+Mantin,282,Mantin,1,2021-05-04 00:00:00
+Bandar Enstek,283,Bandar Enstek,1,2021-05-04 00:00:00
+Nilai,284,Nilai,1,2021-05-04 00:00:00
+Labu,285,Labu,1,2021-05-04 00:00:00
+Kuala Pilah,286,Kuala Pilah,1,2021-05-04 00:00:00
+Bahau,287,Bahau,1,2021-05-04 00:00:00
+Bandar Seri Jempol,288,Bandar Seri Jempol,1,2021-05-04 00:00:00
+Batu Kikir,289,Batu Kikir,1,2021-05-04 00:00:00
+Simpang Pertang,290,Simpang Pertang,1,2021-05-04 00:00:00
+Simpang Durian,291,Simpang Durian,1,2021-05-04 00:00:00
+Tampin,292,Tampin,1,2021-05-04 00:00:00
+Johol,293,Johol,1,2021-05-04 00:00:00
+Gemencheh,294,Gemencheh,1,2021-05-04 00:00:00
+Gemas,295,Gemas,1,2021-05-04 00:00:00
+Pusat Bandar Palong,296,Pusat Bandar Palong,1,2021-05-04 00:00:00
+Rompin,297,Rompin,1,2021-05-04 00:00:00
+Melaka,298,Melaka,1,2021-05-04 00:00:00
+Ayer Keroh,299,Ayer Keroh,1,2021-05-04 00:00:00
+Durian Tunggal,300,Durian Tunggal,1,2021-05-04 00:00:00
+Kem Trendak,301,Kem Trendak,1,2021-05-04 00:00:00
+Sungai Udang,302,Sungai Udang,1,2021-05-04 00:00:00
+Tanjong Kling,303,Tanjong Kling,1,2021-05-04 00:00:00
+Jasin,304,Jasin,1,2021-05-04 00:00:00
+Asahan,305,Asahan,1,2021-05-04 00:00:00
+Bemban,306,Bemban,1,2021-05-04 00:00:00
+Merlimau,307,Merlimau,1,2021-05-04 00:00:00
+Sungai Rambai,308,Sungai Rambai,1,2021-05-04 00:00:00
+Sungai Rambai,309,Sungai Rambai,1,2021-05-04 00:00:00
+Selandar,310,Selandar,1,2021-05-04 00:00:00
+Alor Gajah,311,Alor Gajah,1,2021-05-04 00:00:00
+Lubok China,312,Lubok China,1,2021-05-04 00:00:00
+Kuala Sungai Baru,313,Kuala Sungai Baru,1,2021-05-04 00:00:00
+Masjid Tanah,314,Masjid Tanah,1,2021-05-04 00:00:00
+Nusajaya,315,Nusajaya,1,2021-05-04 00:00:00
+Johor Bahru,316,Johor Bahru,1,2021-05-04 00:00:00
+Kulai,317,Kulai,1,2021-05-04 00:00:00
+Senai,318,Senai,1,2021-05-04 00:00:00
+Bandar Tenggara,319,Bandar Tenggara,1,2021-05-04 00:00:00
+Gugusan Taib Andak,320,Gugusan Taib Andak,1,2021-05-04 00:00:00
+Pekan Nenas,321,Pekan Nenas,1,2021-05-04 00:00:00
+Gelang Patah,322,Gelang Patah,1,2021-05-04 00:00:00
+Pengerang,323,Pengerang,1,2021-05-04 00:00:00
+Pasir Gudang,324,Pasir Gudang,1,2021-05-04 00:00:00
+Masai,325,Masai,1,2021-05-04 00:00:00
+Ulu Tiram,326,Ulu Tiram,1,2021-05-04 00:00:00
+Layang-Layang,327,Layang-Layang,1,2021-05-04 00:00:00
+Kota Tinggi,328,Kota Tinggi,1,2021-05-04 00:00:00
+Ayer Tawar 2,329,Ayer Tawar 2,1,2021-05-04 00:00:00
+Ayer Tawar 3,330,Ayer Tawar 3,1,2021-05-04 00:00:00
+Ayer Tawar 4,331,Ayer Tawar 4,1,2021-05-04 00:00:00
+Ayer Tawar 5,332,Ayer Tawar 5,1,2021-05-04 00:00:00
+Bandar Penawar,333,Bandar Penawar,1,2021-05-04 00:00:00
+Pontian,334,Pontian,1,2021-05-04 00:00:00
+Ayer Baloi,335,Ayer Baloi,1,2021-05-04 00:00:00
+Benut,336,Benut,1,2021-05-04 00:00:00
+Kukup,337,Kukup,1,2021-05-04 00:00:00
+Batu Pahat,338,Batu Pahat,1,2021-05-04 00:00:00
+Rengit,339,Rengit,1,2021-05-04 00:00:00
+Senggarang,340,Senggarang,1,2021-05-04 00:00:00
+Seri Gading,341,Seri Gading,1,2021-05-04 00:00:00
+Seri Medan,342,Seri Medan,1,2021-05-04 00:00:00
+Parit Sulong,343,Parit Sulong,1,2021-05-04 00:00:00
+Semerah,344,Semerah,1,2021-05-04 00:00:00
+Yong Peng,345,Yong Peng,1,2021-05-04 00:00:00
+Muar,346,Muar,1,2021-05-04 00:00:00
+Parit Jawa,347,Parit Jawa,1,2021-05-04 00:00:00
+Bukit Pasir,348,Bukit Pasir,1,2021-05-04 00:00:00
+Sungai Mati,349,Sungai Mati,1,2021-05-04 00:00:00
+Panchor,350,Panchor,1,2021-05-04 00:00:00
+Pagoh,351,Pagoh,1,2021-05-04 00:00:00
+Gerisek,352,Gerisek,1,2021-05-04 00:00:00
+Bukit Gambir,353,Bukit Gambir,1,2021-05-04 00:00:00
+Tangkak,354,Tangkak,1,2021-05-04 00:00:00
+Segamat,355,Segamat,1,2021-05-04 00:00:00
+Batu Anam,356,Batu Anam,1,2021-05-04 00:00:00
+Jementah,357,Jementah,1,2021-05-04 00:00:00
+Labis,358,Labis,1,2021-05-04 00:00:00
+Chaah,359,Chaah,1,2021-05-04 00:00:00
+Kluang,360,Kluang,1,2021-05-04 00:00:00
+Ayer Hitam,361,Ayer Hitam,1,2021-05-04 00:00:00
+Simpang Rengam,362,Simpang Rengam,1,2021-05-04 00:00:00
+Rengam,363,Rengam,1,2021-05-04 00:00:00
+Parit Raja,364,Parit Raja,1,2021-05-04 00:00:00
+Bekok,365,Bekok,1,2021-05-04 00:00:00
+Paloh,366,Paloh,1,2021-05-04 00:00:00
+Kahang,367,Kahang,1,2021-05-04 00:00:00
+Mersing,368,Mersing,1,2021-05-04 00:00:00
+Endau,369,Endau,1,2021-05-04 00:00:00
+Labuan,370,Labuan,1,2021-05-04 00:00:00
+Kota Kinabalu,371,Kota Kinabalu,1,2021-05-04 00:00:00
+Beverly,372,Beverly,1,2021-05-04 00:00:00
+Putatan,373,Putatan,1,2021-05-04 00:00:00
+Likas,374,Likas,1,2021-05-04 00:00:00
+Inanam,375,Inanam,1,2021-05-04 00:00:00
+Tanjung Aru,376,Tanjung Aru,1,2021-05-04 00:00:00
+Keningau,377,Keningau,1,2021-05-04 00:00:00
+Kudat,378,Kudat,1,2021-05-04 00:00:00
+Kota Marudu,379,Kota Marudu,1,2021-05-04 00:00:00
+Kota Belud,380,Kota Belud,1,2021-05-04 00:00:00
+Tuaran,381,Tuaran,1,2021-05-04 00:00:00
+Tamparuli,382,Tamparuli,1,2021-05-04 00:00:00
+Tenghilan,383,Tenghilan,1,2021-05-04 00:00:00
+Ranau,384,Ranau,1,2021-05-04 00:00:00
+Penampang,385,Penampang,1,2021-05-04 00:00:00
+Papar,386,Papar,1,2021-05-04 00:00:00
+Tambunan,387,Tambunan,1,2021-05-04 00:00:00
+Bongawan,388,Bongawan,1,2021-05-04 00:00:00
+Membakut,389,Membakut,1,2021-05-04 00:00:00
+Kuala Penyu,390,Kuala Penyu,1,2021-05-04 00:00:00
+Menumbok,391,Menumbok,1,2021-05-04 00:00:00
+Beaufort,392,Beaufort,1,2021-05-04 00:00:00
+Sipitang,393,Sipitang,1,2021-05-04 00:00:00
+Tenom,394,Tenom,1,2021-05-04 00:00:00
+Nabawan,395,Nabawan,1,2021-05-04 00:00:00
+Sandakan,396,Sandakan,1,2021-05-04 00:00:00
+Beluran,397,Beluran,1,2021-05-04 00:00:00
+Kota Kinabatangan,398,Kota Kinabatangan,1,2021-05-04 00:00:00
+Pamol,399,Pamol,1,2021-05-04 00:00:00
+Tawau,400,Tawau,1,2021-05-04 00:00:00
+Lahad Datu,401,Lahad Datu,1,2021-05-04 00:00:00
+Kunak,402,Kunak,1,2021-05-04 00:00:00
+Semporna,403,Semporna,1,2021-05-04 00:00:00
+Kuching,404,Kuching,1,2021-05-04 00:00:00
+Bau,405,Bau,1,2021-05-04 00:00:00
+Siburan,406,Siburan,1,2021-05-04 00:00:00
+Kota Samarahan,407,Kota Samarahan,1,2021-05-04 00:00:00
+Lundu,408,Lundu,1,2021-05-04 00:00:00
+Asajaya,409,Asajaya,1,2021-05-04 00:00:00
+Kabong,410,Kabong,1,2021-05-04 00:00:00
+Serian,411,Serian,1,2021-05-04 00:00:00
+Simunjan,412,Simunjan,1,2021-05-04 00:00:00
+Sebuyau,413,Sebuyau,1,2021-05-04 00:00:00
+Lingga,414,Lingga,1,2021-05-04 00:00:00
+Pusa,415,Pusa,1,2021-05-04 00:00:00
+Sri Aman,416,Sri Aman,1,2021-05-04 00:00:00
+Roban,417,Roban,1,2021-05-04 00:00:00
+Saratok,418,Saratok,1,2021-05-04 00:00:00
+Debak,419,Debak,1,2021-05-04 00:00:00
+Spaoh,420,Spaoh,1,2021-05-04 00:00:00
+Betong,421,Betong,1,2021-05-04 00:00:00
+Engkilili,422,Engkilili,1,2021-05-04 00:00:00
+Lubok Antu,423,Lubok Antu,1,2021-05-04 00:00:00
+Sibu,424,Sibu,1,2021-05-04 00:00:00
+Sarikei,425,Sarikei,1,2021-05-04 00:00:00
+Belawai,426,Belawai,1,2021-05-04 00:00:00
+Daro,427,Daro,1,2021-05-04 00:00:00
+Matu,428,Matu,1,2021-05-04 00:00:00
+Dalat,429,Dalat,1,2021-05-04 00:00:00
+Balingian,430,Balingian,1,2021-05-04 00:00:00
+Mukah,431,Mukah,1,2021-05-04 00:00:00
+Bintangor,432,Bintangor,1,2021-05-04 00:00:00
+Julau,433,Julau,1,2021-05-04 00:00:00
+Kanowit,434,Kanowit,1,2021-05-04 00:00:00
+Kapit,435,Kapit,1,2021-05-04 00:00:00
+Song,436,Song,1,2021-05-04 00:00:00
+Belaga,437,Belaga,1,2021-05-04 00:00:00
+Bintulu,439,Bintulu,1,2021-05-04 00:00:00
+Sebauh,440,Sebauh,1,2021-05-04 00:00:00
+Tatau,441,Tatau,1,2021-05-04 00:00:00
+Miri,442,Miri,1,2021-05-04 00:00:00
+Baram,443,Baram,1,2021-05-04 00:00:00
+Lutong,444,Lutong,1,2021-05-04 00:00:00
+Bekenu,445,Bekenu,1,2021-05-04 00:00:00
+Niah,446,Niah,1,2021-05-04 00:00:00
+Long Lama,447,Long Lama,1,2021-05-04 00:00:00
+Limbang,448,Limbang,1,2021-05-04 00:00:00
+Nanga Medamit,449,Nanga Medamit,1,2021-05-04 00:00:00
+Sundar,450,Sundar,1,2021-05-04 00:00:00
+Lawas,451,Lawas,1,2021-05-04 00:00:00

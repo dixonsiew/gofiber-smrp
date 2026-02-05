@@ -1,0 +1,122 @@
+{
+    "filename": "{{ filename }}",
+    "refServiceTypeCode": "{{ refServiceTypeCode }}",
+    "formType": "301",
+    "facilityCode": "{{ facilityCode }}",
+    "dischargeFrom": "{{ dischargeFrom }}",
+    "dischargeTo": "{{ dischargeTo }}",
+    "forms": [{% for f in forms %}
+        {
+            "visit": {
+                "rn": "{{ f.rn }}",
+                "mrn": "{{ f.mrn }}",
+                "eventDate": "{{ f.eventDate }}",
+                "isPoliceCase": "{{ f.isPoliceCase }}",
+                "internalReferral": {{ f.internalReferral }},
+                "refReferralSourceCode": "{{ f.refReferralSourceCode }}"
+            },
+            "person": {
+                "refPersonTitleCode": "{{ f.person.refPersonTitleCode }}",
+                "fullName": "{{ f.person.fullName }}",
+                "refGenderCode": "{{ f.refGenderCode }}",
+                "dob": "{{ f.dob }}",
+                "refMaritalStatusCode": "{{ f.refMaritalStatusCode }}",
+                "refReligionCode": "{{ f.refReligionCode }}",
+                "refCitizenshipCode": "{{ f.refCitizenshipCode }}",
+                "refEthnicCode": "{{ f.refEthnicCode }}",
+                "height": "{{ f.height }}",
+                "weight": "{{ f.weight }}",
+                "refForeignerOriginCountryCode": "{{ f.refForeignerOriginCountryCode }}",
+                "refForeignerResidenceCountryCode": "{{ f.refForeignerResidenceCountryCode }}",
+                "refPersonCategoryCode": "{{ f.refPersonCategoryCode }}",
+                "identifications": [
+                    {
+                        "refIdentificationTypeCode": "{{ f.person.refIdentificationTypeCode }}",
+                        "identificationNo": "{{ f.person.identificationNo }}"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "refAddressTypeCode": "{{ f.person.refAddressTypeCode }}",
+                        "street1": "{{ f.person.street1 }}",
+                        "street2": "{{ f.person.street2 }}",
+                        "refCityCode": "{{ f.person.refCityCode }}",
+                        "refPostCode": "{{ f.person.refPostCode }}",
+                        "refStateCode": "{{ f.person.refStateCode }}",
+                        "refCountryCode": "{{ f.person.refCountryCode }}"
+                    }
+                ],
+                "contacts": [
+                    {
+                        "refContactTypeCode": "{{ f.person.refContactTypeCode }}",
+                        "contactInfo": "{{ f.person.contactInfo }}"
+                    }
+                ]
+            },
+            "nextOfKins": {
+                "refPersonTitleCode": "{{ f.nextOfKins.refPersonTitleCode }}",
+                "fullName": "{{ f.nextOfKins.fullName }}",
+                "refRelationshipCode": "{{ f.refRelationshipCode }}",
+                "identifications": [
+                    {
+                        "refIdentificationTypeCode": "{{ f.nextOfKins.refIdentificationTypeCode }}",
+                        "identificationNo": "{{ f.nextOfKins.identificationNo }}"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "refAddressTypeCode": "{{ f.nextOfKins.refAddressTypeCode }}",
+                        "street1": "{{ f.nextOfKins.street1 }}",
+                        "street2": "{{ f.nextOfKins.street2 }}",
+                        "refCityCode": "{{ f.nextOfKins.refCityCode }}",
+                        "refPostCode": "{{ f.nextOfKins.refPostCode }}",
+                        "refStateCode": "{{ f.nextOfKins.refStateCode }}",
+                        "refCountryCode": "{{ f.nextOfKins.refCountryCode }}"
+                    }
+                ],
+                "contacts": [
+                    {
+                        "refContactTypeCode": "{{ f.nextOfKins.refContactTypeCode }}",
+                        "contactInfo": "{{ f.nextOfKins.contactInfo }}"
+                    }
+                ]
+            },
+            "admission": {
+                "totalDurationDay": "{{ f.totalDurationDay }}",
+                "inpatient": [
+                    {
+                        "refWardTransitionTypeCode": "{{ f.refWardTransitionTypeCode }}",
+                        "wardDateTime": "{{ f.wardDateTime }}",
+                        "wardCode": "{{ f.wardCode }}",
+                        "refDisciplineCode": "{{ f.refDisciplineCode }}",
+                        "refSpecialityCode": "{{ f.refSpecialityCode }}",
+                        "refSubSpecialityCode": "{{ f.refSubSpecialityCode }}",
+                        "refWardClassCode": "{{ f.refWardClassCode }}",
+                        "refWardCategoryCode": "{{ f.refWardCategoryCode }}"
+                    }
+                ],
+                "discharge": {
+                    "refDischargeTypeCode": "{{ f.refDischargeTypeCode }}",
+                    "dischargeDateTime": "{{ f.dischargeDateTime }}",
+                    "dischargeOfficers": [
+                        {
+                            "refDischargeOfficerTypeCode": "{{ f.refDischargeOfficerTypeCode }}",
+                            "mmc": "{{ f.mmc }}"
+                        }
+                    ]
+                }
+            },
+            "diagnosis": [
+                {
+                    "refDiagnosisItemTypeCode": "{{ f.refDiagnosisItemTypeCode }}",
+                    "description": "{{ f.description }}",
+                    "diagnosisIcd10Codes": [
+                        {
+                            "refIcd10Main": "{{ f.refIcd10Main }}"
+                        }
+                    ]
+                }
+            ]
+        }{% if not forloop.Last %},{% endif %}{% endfor %}
+    ]
+}

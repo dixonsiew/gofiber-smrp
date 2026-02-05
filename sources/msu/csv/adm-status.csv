@@ -1,0 +1,6 @@
+﻿desc,code,ref,created_by,created_date
+ADMITTED,A,Admission,1,2021-05-04 00:00:00
+DISCHARGED,D,Discharge,1,2021-05-04 00:00:00
+,T,Transfer,1,2021-05-04 00:00:00
+PRE-ADMITTED,A,Admission,1,2021-05-04 00:00:00
+PRE-DISCHARGED,D,Discharge,1,2021-05-04 00:00:00

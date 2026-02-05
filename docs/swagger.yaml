@@ -1,0 +1,4392 @@
+basePath: /smrp
+definitions:
+  dto.ChangePasswordDto:
+    properties:
+      confirm_password:
+        maxLength: 150
+        type: string
+      password:
+        maxLength: 150
+        type: string
+    required:
+    - confirm_password
+    - password
+    type: object
+  dto.CommonSetupDto:
+    properties:
+      code:
+        maxLength: 30
+        type: string
+      desc:
+        maxLength: 300
+        type: string
+      ref:
+        maxLength: 200
+        type: string
+    required:
+    - code
+    - desc
+    - ref
+    type: object
+  dto.KeywordDto:
+    properties:
+      keyword:
+        type: string
+    type: object
+  dto.LoginDto:
+    properties:
+      password:
+        default: admin123
+        type: string
+      username:
+        default: admin
+        type: string
+    required:
+    - password
+    - username
+    type: object
+  dto.RefreshTokenDto:
+    properties:
+      refresh_token:
+        type: string
+    required:
+    - refresh_token
+    type: object
+  dto.ReportQueryDto:
+    properties:
+      _limit:
+        type: integer
+      _page:
+        type: integer
+      datefrom:
+        type: string
+      dateto:
+        type: string
+      vt:
+        type: integer
+    required:
+    - datefrom
+    - dateto
+    type: object
+  model.CommonSetup:
+    properties:
+      code:
+        type: string
+      created_by:
+        type: integer
+      created_date:
+        type: string
+      deleted:
+        type: boolean
+      deleted_by:
+        type: integer
+      deletedDate:
+        type: string
+      desc:
+        type: string
+      id:
+        type: integer
+      modified_by:
+        type: integer
+      modified_date:
+        type: string
+      ref:
+        type: string
+    type: object
+  model.Role:
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+    type: object
+  model.User:
+    properties:
+      first_name:
+        type: string
+      id:
+        type: integer
+      last_login:
+        type: string
+      last_name:
+        type: string
+      roles:
+        items:
+          $ref: '#/definitions/model.Role'
+        type: array
+      username:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: SMRP Backend API description.
+  title: Swagger SMRP Backend API
+  version: "1.0"
+paths:
+  /api/adm-status:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/AdmStatus
+  /api/adm-status/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/AdmStatus
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/AdmStatus
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/AdmStatus
+  /api/adm-statuses:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/AdmStatus
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/AdmStatus
+  /api/change-password:
+    post:
+      parameters:
+      - description: Change Password Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ChangePasswordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Auth
+  /api/ciethnic-groupsies:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/EthnicGroup
+  /api/cities:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/City
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/City
+  /api/city:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/City
+  /api/city/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/City
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/City
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/City
+  /api/countries:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Country
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Country
+  /api/country:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Country
+  /api/country/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Country
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Country
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Country
+  /api/current-user:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Auth
+  /api/delivery-type:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DeliveryType
+  /api/delivery-type/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DeliveryType
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DeliveryType
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DeliveryType
+  /api/delivery-types:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DeliveryType
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DeliveryType
+  /api/diag-item-type:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DiagItemType
+  /api/diag-item-type/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DiagItemType
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DiagItemType
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DiagItemType
+  /api/diag-item-types:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DiagItemType
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DiagItemType
+  /api/discharge-officer:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeOfficer
+  /api/discharge-officer/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeOfficer
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeOfficer
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeOfficer
+  /api/discharge-officers:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeOfficer
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeOfficer
+  /api/discharge-type:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeType
+  /api/discharge-type/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeType
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeType
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeType
+  /api/discharge-types:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeType
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeType
+  /api/education:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Education
+  /api/education/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Education
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Education
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Education
+  /api/educations:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Education
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Education
+  /api/ethnic-group:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/EthnicGroup
+  /api/ethnic-group/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/EthnicGroup
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/EthnicGroup
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/EthnicGroup
+  /api/ethnic-groups:
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/EthnicGroup
+  /api/gender:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Gender
+  /api/gender/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Gender
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Gender
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Gender
+  /api/genders:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Gender
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Gender
+  /api/id-type:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/IdType
+  /api/id-type/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/IdType
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/IdType
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/IdType
+  /api/id-types:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/IdType
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/IdType
+  /api/income:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Income
+  /api/income/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Income
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Income
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Income
+  /api/incomes:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Income
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Income
+  /api/lookup/adm-statuses:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/AdmStatus
+  /api/lookup/cities:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/City
+  /api/lookup/countries:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Country
+  /api/lookup/delivery-types:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DeliveryType
+  /api/lookup/diag-item-types:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DiagItemType
+  /api/lookup/discharge-officers:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeOfficer
+  /api/lookup/discharge-types:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/DischargeType
+  /api/lookup/educations:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Education
+  /api/lookup/ethnic-groups:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/EthnicGroup
+  /api/lookup/genders:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Gender
+  /api/lookup/groups:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.Role'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Role
+  /api/lookup/id-types:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/IdType
+  /api/lookup/incomes:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Income
+  /api/lookup/marital_statuses:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/MaritalStatus
+  /api/lookup/occupations:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Occupation
+  /api/lookup/person-category-codes:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Person Category Code
+  /api/lookup/referrals:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Referral
+  /api/lookup/relationships:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Relationship
+  /api/lookup/religions:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Religion
+  /api/lookup/specialities:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Speciality
+  /api/lookup/states:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/State
+  /api/lookup/titles:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Title
+  /api/lookup/visit-types:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/VisitType
+  /api/lookup/ward-classes:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/WardClass
+  /api/marital_status:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/MaritalStatus
+  /api/marital_status/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/MaritalStatus
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/MaritalStatus
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/MaritalStatus
+  /api/marital_statuses:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/MaritalStatus
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/MaritalStatus
+  /api/master-pd101/export/rpt1:
+    get:
+      parameters:
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD101
+  /api/master-pd101/export/rpt1/xlsx:
+    get:
+      parameters:
+      - description: vt
+        in: query
+        name: vt
+        type: string
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD101
+  /api/master-pd101/export/rpt2:
+    get:
+      parameters:
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD101
+  /api/master-pd101/rpt1:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: vt
+        in: query
+        name: vt
+        type: string
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD101
+    post:
+      parameters:
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReportQueryDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD101
+  /api/master-pd101/rpt1/{id}:
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: vt
+        in: query
+        name: vt
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD101
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: vt
+        in: query
+        name: vt
+        type: string
+      - description: Update Request
+        in: body
+        name: request
+        required: true
+        schema:
+          additionalProperties: true
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD101
+  /api/master-pd102/export/rpt1:
+    get:
+      parameters:
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD102
+  /api/master-pd102/export/rpt1/xlsx:
+    get:
+      parameters:
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD102
+  /api/master-pd102/rpt1:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD102
+    post:
+      parameters:
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReportQueryDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD102
+  /api/master-pd102/rpt1/{id}:
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD102
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update Request
+        in: body
+        name: request
+        required: true
+        schema:
+          additionalProperties: true
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD102
+  /api/master-pd105/export/rpt1:
+    get:
+      parameters:
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD105
+  /api/master-pd105/export/rpt1/xlsx:
+    get:
+      parameters:
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD105
+  /api/master-pd105/rpt1:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD105
+    post:
+      parameters:
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReportQueryDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD105
+  /api/master-pd105/rpt1/{id}:
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD105
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update Request
+        in: body
+        name: request
+        required: true
+        schema:
+          additionalProperties: true
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD105
+  /api/master-pd301/export/rpt1:
+    get:
+      parameters:
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD301
+  /api/master-pd301/export/rpt1/xlsx:
+    get:
+      parameters:
+      - description: vt
+        in: query
+        name: vt
+        type: string
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD301
+  /api/master-pd301/export/rpt2:
+    get:
+      parameters:
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD301
+  /api/master-pd301/rpt1:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: vt
+        in: query
+        name: vt
+        type: string
+      - description: datefrom
+        in: query
+        name: datefrom
+        type: string
+      - description: dateto
+        in: query
+        name: dateto
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD301
+    post:
+      parameters:
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.ReportQueryDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD301
+  /api/master-pd301/rpt1/{id}:
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: vt
+        in: query
+        name: vt
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD301
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: vt
+        in: query
+        name: vt
+        type: string
+      - description: Update Request
+        in: body
+        name: request
+        required: true
+        schema:
+          additionalProperties: true
+          type: object
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Report/MasterPD301
+  /api/occupation:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Occupation
+  /api/occupation/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Occupation
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Occupation
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Occupation
+  /api/occupations:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Occupation
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Occupation
+  /api/person-category-code:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Person Category Code
+  /api/person-category-code/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Person Category Code
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Person Category Code
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Person Category Code
+  /api/person-category-codes:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Person Category Code
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Person Category Code
+  /api/referral:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Referral
+  /api/referral/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Referral
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Referral
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Referral
+  /api/referrals:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Referral
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Referral
+  /api/relationship:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Relationship
+  /api/relationship/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Relationship
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Relationship
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Relationship
+  /api/relationships:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Relationship
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Relationship
+  /api/religion:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Religion
+  /api/religion/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Religion
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Religion
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Religion
+  /api/religions:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Religion
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Religion
+  /api/specialities:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Speciality
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Speciality
+  /api/speciality:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Speciality
+  /api/speciality/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Speciality
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Speciality
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Speciality
+  /api/state:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/State
+  /api/state/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/State
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/State
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/State
+  /api/states:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/State
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/State
+  /api/title:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Title
+  /api/title/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Title
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Title
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Title
+  /api/titles:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Title
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/Title
+  /api/user:
+    post:
+      parameters:
+      - description: Create User Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/User
+  /api/user/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/User
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/User
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update User Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/User
+  /api/users:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.User'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/User
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.User'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/User
+  /api/visit-type:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/VisitType
+  /api/visit-type/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/VisitType
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/VisitType
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/VisitType
+  /api/visit-types:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/VisitType
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/VisitType
+  /api/ward-class:
+    post:
+      parameters:
+      - description: Create City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/WardClass
+  /api/ward-class/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/WardClass
+    get:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.CommonSetup'
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/WardClass
+    put:
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: Update City Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CommonSetupDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/WardClass
+  /api/ward-classes:
+    get:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/WardClass
+    post:
+      parameters:
+      - description: _page
+        in: query
+        name: _page
+        type: string
+      - description: _limit
+        in: query
+        name: _limit
+        type: string
+      - description: sort
+        in: query
+        name: sort
+        type: string
+      - description: Search Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.KeywordDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/model.CommonSetup'
+            type: array
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/WardClass
+  /o/refresh-token:
+    post:
+      parameters:
+      - description: Refresh Token Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.RefreshTokenDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Auth
+  /o/token:
+    post:
+      parameters:
+      - description: Login Request
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dto.LoginDto'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      tags:
+      - Auth
+securityDefinitions:
+  BearerAuth:
+    description: Type "Bearer" followed by a space and JWT token.
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

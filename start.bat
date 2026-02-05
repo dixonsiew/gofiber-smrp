@@ -1,0 +1,1 @@
+C:\apps\nssm-2.24\win64\nssm start g-smrp

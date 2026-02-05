@@ -1,0 +1,14 @@
+﻿desc,code,ref,created_by,created_date
+N/A,0,No Information,1,2021-05-04 00:00:00
+ISLAM,1,Islam,1,2021-05-04 00:00:00
+CHRISTIANITY,2,Christianity,1,2021-05-04 00:00:00
+BUDDHISM,3,Buddhism,1,2021-05-04 00:00:00
+HINDUISM,4,Hinduism,1,2021-05-04 00:00:00
+,5,Sikhism,1,2021-05-04 00:00:00
+,6,Atheist,1,2021-05-04 00:00:00
+,7,Taoism,1,2021-05-04 00:00:00
+,8,Confucianism,1,2021-05-04 00:00:00
+,9,Bahaism,1,2021-05-04 00:00:00
+,10,Animism,1,2021-05-04 00:00:00
+OTHERS,99,Others,1,2021-05-04 00:00:00
+CATHOLIC,99,Others,1,2021-05-04 00:00:00

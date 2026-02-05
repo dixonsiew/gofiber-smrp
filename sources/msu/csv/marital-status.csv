@@ -1,0 +1,9 @@
+﻿desc,code,ref,created_by,created_date
+N/A,0,No Information,1,2021-05-04 00:00:00
+SINGLE,1,Single,1,2021-05-04 00:00:00
+MARRIED,2,Married,1,2021-05-04 00:00:00
+WIDOWED,3,Widowed,1,2021-05-04 00:00:00
+DIVORCE,4,Divorced,1,2021-05-04 00:00:00
+,99,Others,1,2021-05-04 00:00:00
+SEPARATE,99,Others,1,2021-05-04 00:00:00
+UNKNOWN,99,Others,1,2021-05-04 00:00:00
