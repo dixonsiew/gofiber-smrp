@@ -31,6 +31,9 @@ import (
 // @securityDefinitions.apikey BearerAuth
 // @in header
 // @name Authorization
+// @type http
+// @scheme bearer
+// @bearerFormat JWT
 // @description Type "Bearer" followed by a space and JWT token.
 func main() {
     defer utils.CatchPanic("main")
