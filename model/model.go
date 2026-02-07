@@ -59,6 +59,7 @@ func GetPager(total int, page string, limit string) Pager {
         PageNum: pageNum,
         PageSize: pageSize,
     }
+    pg.SetPageSize(pageSize)
     return pg
 }
 
