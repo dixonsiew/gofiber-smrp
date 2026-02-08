@@ -6594,6 +6594,26 @@ const docTemplate = `{
                 }
             }
         },
+        "/api/users/test": {
+            "get": {
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Setup/User"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
         "/api/visit-type": {
             "post": {
                 "security": [

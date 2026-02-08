@@ -4077,6 +4077,17 @@ paths:
       - BearerAuth: []
       tags:
       - Setup/User
+  /api/users/test:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+      security:
+      - BearerAuth: []
+      tags:
+      - Setup/User
   /api/visit-type:
     post:
       parameters:
