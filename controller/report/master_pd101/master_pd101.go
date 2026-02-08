@@ -1,22 +1,23 @@
 package masterpd101
 
 import (
-	"fmt"
-	"smrp/config"
-	"smrp/database"
-	"smrp/dto"
-	"smrp/middleware"
-	"smrp/model"
-	rpt "smrp/service/report"
-	"smrp/sql"
-	u "smrp/utils"
-	"strings"
+    "encoding/json"
+    "fmt"
+    "smrp/config"
+    "smrp/database"
+    "smrp/dto"
+    "smrp/middleware"
+    "smrp/model"
+    rpt "smrp/service/report"
+    "smrp/sql"
+    u "smrp/utils"
+    "strings"
 
-	"github.com/flosch/pongo2/v6"
-	"github.com/gofiber/fiber/v2"
-	"go.mongodb.org/mongo-driver/v2/bson"
-	"go.mongodb.org/mongo-driver/v2/mongo"
-	"go.mongodb.org/mongo-driver/v2/mongo/options"
+    // "github.com/flosch/pongo2/v6"
+    "github.com/gofiber/fiber/v2"
+    "go.mongodb.org/mongo-driver/v2/bson"
+    "go.mongodb.org/mongo-driver/v2/mongo"
+    "go.mongodb.org/mongo-driver/v2/mongo/options"
 )
 
 // JsonRH101
@@ -125,7 +126,7 @@ func JsonRH101(c *fiber.Ctx) error {
     c.Set("filename", filename)
     c.Set(fiber.HeaderContentType, "application/json")
 
-    js := "views/master-rh101.django"
+    /* js := "views/master-rh101.django"
     tpl := pongo2.Must(pongo2.FromFile(js))
     s, _ := tpl.Execute(pongo2.Context{
         "filename":           filename,
@@ -134,8 +135,17 @@ func JsonRH101(c *fiber.Ctx) error {
         "refServiceTypeCode": "02",
         "facilityCode":       facilityCode,
         "forms":              forms,
-    })
-    return c.SendString(s)
+    }) */
+    data := fiber.Map{
+        "filename":           filename,
+        "admissionFrom":      datefrom,
+        "admissionTo":        dateto,
+        "refServiceTypeCode": "02",
+        "facilityCode":       facilityCode,
+        "forms":              forms,
+    }
+    jdata, _ := json.MarshalIndent(data, "", "    ")
+    return c.SendString(string(jdata))
 }
 
 // JsonPD101
@@ -251,7 +261,7 @@ func JsonPD101(c *fiber.Ctx) error {
     c.Set("filename", filename)
     c.Set(fiber.HeaderContentType, "application/json")
 
-    js := "views/master-pd101.django"
+    /* js := "views/master-pd101.django"
     tpl := pongo2.Must(pongo2.FromFile(js))
     s, _ := tpl.Execute(pongo2.Context{
         "filename":           filename,
@@ -260,8 +270,17 @@ func JsonPD101(c *fiber.Ctx) error {
         "refServiceTypeCode": "01",
         "facilityCode":       facilityCode,
         "forms":              forms,
-    })
-    return c.SendString(s)
+    }) */
+    data := fiber.Map{
+        "filename":           filename,
+        "admissionFrom":      datefrom,
+        "admissionTo":        dateto,
+        "refServiceTypeCode": "01",
+        "facilityCode":       facilityCode,
+        "forms":              forms,
+    }
+    jdata, _ := json.MarshalIndent(data, "", "    ")
+    return c.SendString(string(jdata))
 }
 
 // Xlsx
@@ -306,13 +325,13 @@ func Xlsx(c *fiber.Ctx) error {
     }
 
     facilityCode := config.Config("facilityCode")
-    filename := fmt.Sprintf("%s_%s_%s_%s.xlsx",facilityCode, ds1, ds2, pf)
+    filename := fmt.Sprintf("%s_%s_%s_%s.xlsx", facilityCode, ds1, ds2, pf)
     bx, err := u.GetXlsx(COLUMN_MAP, lx)
     if err != nil {
         u.LogError(err)
         return err
     }
-    
+
     c.Set(fiber.HeaderContentDisposition, fmt.Sprintf("attachment; filename=%s", filename))
     c.Set(fiber.HeaderCacheControl, "no-cache, no-store, must-revalidate")
     c.Set(fiber.HeaderPragma, "no-cache")
@@ -475,7 +494,7 @@ func Edit(c *fiber.Ctx) error {
         o := ls[0]
         return c.JSON(o)
     }
-    
+
     return fiber.NewError(fiber.StatusNotFound, "Record not found")
 }
 

@@ -1,6 +1,7 @@
 package masterpd301
 
 import (
+    "encoding/json"
     "fmt"
     "smrp/config"
     "smrp/database"
@@ -12,7 +13,7 @@ import (
     u "smrp/utils"
     "strings"
 
-    "github.com/flosch/pongo2/v6"
+    // "github.com/flosch/pongo2/v6"
     "github.com/gofiber/fiber/v2"
     "go.mongodb.org/mongo-driver/v2/bson"
     "go.mongodb.org/mongo-driver/v2/mongo"
@@ -132,7 +133,7 @@ func JsonRH101(c *fiber.Ctx) error {
     c.Set("filename", filename)
     c.Set(fiber.HeaderContentType, "application/json")
 
-    js := "views/master-rh301.django"
+    /* js := "views/master-rh301.django"
     tpl := pongo2.Must(pongo2.FromFile(js))
     s, _ := tpl.Execute(pongo2.Context{
         "filename":           filename,
@@ -141,8 +142,17 @@ func JsonRH101(c *fiber.Ctx) error {
         "refServiceTypeCode": "02",
         "facilityCode":       facilityCode,
         "forms":              forms,
-    })
-    return c.SendString(s)
+    }) */
+    data := fiber.Map{
+        "filename":           filename,
+        "dischargeFrom":      datefrom,
+        "dischargeTo":        dateto,
+        "refServiceTypeCode": "02",
+        "facilityCode":       facilityCode,
+        "forms":              forms,
+    }
+    jdata, _ := json.MarshalIndent(data, "", "    ")
+    return c.SendString(string(jdata))
 }
 
 // JsonPD101
@@ -265,7 +275,7 @@ func JsonPD101(c *fiber.Ctx) error {
     c.Set("filename", filename)
     c.Set(fiber.HeaderContentType, "application/json")
 
-    js := "views/master-pd301.django"
+    /* js := "views/master-pd301.django"
     tpl := pongo2.Must(pongo2.FromFile(js))
     s, _ := tpl.Execute(pongo2.Context{
         "filename":           filename,
@@ -274,8 +284,17 @@ func JsonPD101(c *fiber.Ctx) error {
         "refServiceTypeCode": "01",
         "facilityCode":       facilityCode,
         "forms":              forms,
-    })
-    return c.SendString(s)
+    }) */
+    data := fiber.Map{
+        "filename":           filename,
+        "dischargeFrom":      datefrom,
+        "dischargeTo":        dateto,
+        "refServiceTypeCode": "01",
+        "facilityCode":       facilityCode,
+        "forms":              forms,
+    }
+    jdata, _ := json.MarshalIndent(data, "", "    ")
+    return c.SendString(string(jdata))
 }
 
 // Xlsx

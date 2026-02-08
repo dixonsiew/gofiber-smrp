@@ -1,6 +1,7 @@
 package masterpd102
 
 import (
+    "encoding/json"
     "fmt"
     "smrp/config"
     "smrp/database"
@@ -12,7 +13,7 @@ import (
     u "smrp/utils"
     "strings"
 
-    "github.com/flosch/pongo2/v6"
+    // "github.com/flosch/pongo2/v6"
     "github.com/gofiber/fiber/v2"
     "go.mongodb.org/mongo-driver/v2/bson"
     "go.mongodb.org/mongo-driver/v2/mongo"
@@ -152,7 +153,7 @@ func JsonPD101(c *fiber.Ctx) error {
     c.Set("filename", filename)
     c.Set(fiber.HeaderContentType, "application/json")
 
-    js := "views/master-pd102.django"
+    /* js := "views/master-pd102.django"
     tpl := pongo2.Must(pongo2.FromFile(js))
     s, _ := tpl.Execute(pongo2.Context{
         "filename":           filename,
@@ -161,8 +162,17 @@ func JsonPD101(c *fiber.Ctx) error {
         "refServiceTypeCode": "01",
         "facilityCode":       facilityCode,
         "forms":              forms,
-    })
-    return c.SendString(s)
+    }) */
+    data := fiber.Map{
+        "filename":           filename,
+        "birthDateFrom":      datefrom,
+        "birthDateTo":        dateto,
+        "refServiceTypeCode": "01",
+        "facilityCode":       facilityCode,
+        "forms":              forms,
+    }
+    jdata, _ := json.MarshalIndent(data, "", "    ")
+    return c.SendString(string(jdata))
 }
 
 // Xlsx
