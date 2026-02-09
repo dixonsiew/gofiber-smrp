@@ -462,6 +462,7 @@ func queryAndSave(data dto.ReportQueryDto, username string) (fiber.Map, error) {
         PageNum:  page,
         PageSize: limit,
     }
+    pg.SetPageSize(pg.PageSize)
 
     if total > 0 {
         cli := database.GetMongoClient()
