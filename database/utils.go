@@ -16,9 +16,9 @@ func GetDataList(rows *sql.Rows) ([]any, []string) {
     for i, colType := range colTypes {
         var val any
         switch colType.DatabaseTypeName() {
-        case "NCHAR", "VARCHAR", "VARCHAR2", "NVARCHAR2", "DATE":
+        case "NCHAR", "VARCHAR", "VARCHAR2", "NVARCHAR2", "DATE", "TIMESTAMP", "TIMESTAMP WITH TIME ZONE", "TIMESTAMP WITH LOCAL TIME ZONE":
             val = new(sql.NullString)
-        case "INTEGER", "LONG", "SMALLINT":
+        case "INTEGER", "LONG", "INT", "SMALLINT":
             val = new(sql.NullInt64)
         case "REAL", "DOUBLE PRECISION", "FLOAT", "DECIMAL", "NUMBER":
             val = new(sql.NullFloat64)
