@@ -436,15 +436,15 @@ func queryAndSave(data dto.ReportQueryDto, username string) (fiber.Map, error) {
     md := make(fiber.Map)
     page := data.Page
     limit := data.Limit
-    vt := fmt.Sprintf("%d", data.Vt)
+    // vt := fmt.Sprintf("%d", data.Vt)
     datefrom := data.DateFrom
     dateto := data.DateTo
-    vs := "('INPATIENT')"
-    if vt == "1" {
-        vs = "('DAY-SURGERY')"
-    }
+    // vs := "('INPATIENT')"
+    // if vt == "1" {
+    //     vs = "('DAY-SURGERY')"
+    // }
 
-    q := sql.GetMasterPD101(vs)
+    q := sql.GetMasterPD105()
     db := database.GetDbrs()
     rows, err := db.Query(q, datefrom, dateto)
     if err != nil {

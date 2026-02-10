@@ -595,7 +595,7 @@ func queryAndSave(data dto.ReportQueryDto, username string) (fiber.Map, error) {
         vs = "('DAY-SURGERY')"
     }
 
-    q := sql.GetMasterPD101(vs)
+    q := sql.GetMasterPD301(vs)
     db := database.GetDbrs()
     rows, err := db.Query(q, datefrom, dateto)
     if err != nil {
