@@ -16,7 +16,7 @@ func GetDataList(rows *sql.Rows) ([]any, []string) {
     for i, colType := range colTypes {
         var val any
         switch colType.DatabaseTypeName() {
-        case "NCHAR", "VARCHAR", "VARCHAR2", "NVARCHAR2":
+        case "NCHAR", "VARCHAR", "VARCHAR2", "NVARCHAR2", "DATE":
             val = new(sql.NullString)
         case "INTEGER", "LONG", "SMALLINT":
             val = new(sql.NullInt64)
