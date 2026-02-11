@@ -154,7 +154,7 @@ type CommonSetup struct {
     ModifiedDate string `json:"modified_date"`
     Deleted      bool   `json:"deleted"`
     DeletedBy    int    `json:"deleted_by"`
-    DeletedDate  string
+    DeletedDate  string `json:"deleted_date"`
 }
 
 func (o *CommonSetup) FromDbModel(m DbCommonSetup) {
