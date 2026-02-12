@@ -7217,11 +7217,11 @@ const docTemplate = `{
                 "deleted": {
                     "type": "boolean"
                 },
-                "deletedDate": {
-                    "type": "string"
-                },
                 "deleted_by": {
                     "type": "integer"
+                },
+                "deleted_date": {
+                    "type": "string"
                 },
                 "desc": {
                     "type": "string"

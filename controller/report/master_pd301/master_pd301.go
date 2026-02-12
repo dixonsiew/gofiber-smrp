@@ -152,7 +152,7 @@ func JsonRH101(c *fiber.Ctx) error {
         "forms":              forms,
     }
     jdata, _ := json.MarshalIndent(data, "", "    ")
-    return c.SendString(string(jdata))
+    return c.Send(jdata)
 }
 
 // JsonPD101
@@ -294,7 +294,7 @@ func JsonPD101(c *fiber.Ctx) error {
         "forms":              forms,
     }
     jdata, _ := json.MarshalIndent(data, "", "    ")
-    return c.SendString(string(jdata))
+    return c.Send(jdata)
 }
 
 // Xlsx
