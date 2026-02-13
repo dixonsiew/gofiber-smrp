@@ -502,7 +502,7 @@ func Edit(c *fiber.Ctx) error {
 //
 // @Tags Report/MasterPD101
 // @Produce json
-// @Param        id              path      int            true  "id"
+// @Param        id              path      string         true  "id"
 // @Param        vt              query     string         false  "vt"
 // @Param        request         body      map[string]any true  "Update Request"
 // @Security BearerAuth

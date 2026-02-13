@@ -472,7 +472,7 @@ func SearchList(c *fiber.Ctx) error {
 //
 // @Tags Report/MasterPD301
 // @Produce json
-// @Param        id              path      string     true  "id"
+// @Param        id              path      string  true  "id"
 // @Param        vt              query     string  false  "vt"
 // @Security BearerAuth
 // @Success 200
@@ -516,7 +516,7 @@ func Edit(c *fiber.Ctx) error {
 //
 // @Tags Report/MasterPD301
 // @Produce json
-// @Param        id              path      int            true  "id"
+// @Param        id              path      string         true  "id"
 // @Param        vt              query     string         false  "vt"
 // @Param        request         body      map[string]any true  "Update Request"
 // @Security BearerAuth
