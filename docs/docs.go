@@ -3106,7 +3106,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/lookup/marital_statuses": {
+        "/api/lookup/marital-statuses": {
             "get": {
                 "security": [
                     {
@@ -3392,7 +3392,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/marital_status": {
+        "/api/marital-status": {
             "post": {
                 "security": [
                     {
@@ -3423,7 +3423,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/marital_status/{id}": {
+        "/api/marital-status/{id}": {
             "get": {
                 "security": [
                     {
@@ -3518,7 +3518,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/marital_statuses": {
+        "/api/marital-statuses": {
             "get": {
                 "security": [
                     {

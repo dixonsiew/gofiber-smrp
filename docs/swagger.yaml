@@ -1980,7 +1980,7 @@ paths:
       - BearerAuth: []
       tags:
       - Setup/Income
-  /api/lookup/marital_statuses:
+  /api/lookup/marital-statuses:
     get:
       produces:
       - application/json
@@ -2145,7 +2145,7 @@ paths:
       - BearerAuth: []
       tags:
       - Setup/WardClass
-  /api/marital_status:
+  /api/marital-status:
     post:
       parameters:
       - description: Create City Request
@@ -2163,7 +2163,7 @@ paths:
       - BearerAuth: []
       tags:
       - Setup/MaritalStatus
-  /api/marital_status/{id}:
+  /api/marital-status/{id}:
     delete:
       parameters:
       - description: id
@@ -2220,7 +2220,7 @@ paths:
       - BearerAuth: []
       tags:
       - Setup/MaritalStatus
-  /api/marital_statuses:
+  /api/marital-statuses:
     get:
       parameters:
       - description: _page

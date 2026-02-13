@@ -3099,7 +3099,7 @@
                 }
             }
         },
-        "/api/lookup/marital_statuses": {
+        "/api/lookup/marital-statuses": {
             "get": {
                 "security": [
                     {
@@ -3385,7 +3385,7 @@
                 }
             }
         },
-        "/api/marital_status": {
+        "/api/marital-status": {
             "post": {
                 "security": [
                     {
@@ -3416,7 +3416,7 @@
                 }
             }
         },
-        "/api/marital_status/{id}": {
+        "/api/marital-status/{id}": {
             "get": {
                 "security": [
                     {
@@ -3511,7 +3511,7 @@
                 }
             }
         },
-        "/api/marital_statuses": {
+        "/api/marital-statuses": {
             "get": {
                 "security": [
                     {
