@@ -2401,7 +2401,7 @@ paths:
         in: path
         name: id
         required: true
-        type: integer
+        type: string
       - description: vt
         in: query
         name: vt
@@ -2534,7 +2534,7 @@ paths:
         in: path
         name: id
         required: true
-        type: integer
+        type: string
       produces:
       - application/json
       responses:
@@ -2659,7 +2659,7 @@ paths:
         in: path
         name: id
         required: true
-        type: integer
+        type: string
       produces:
       - application/json
       responses:
@@ -2812,7 +2812,7 @@ paths:
         in: path
         name: id
         required: true
-        type: integer
+        type: string
       - description: vt
         in: query
         name: vt

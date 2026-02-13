@@ -458,7 +458,7 @@ func SearchList(c *fiber.Ctx) error {
 //
 // @Tags Report/MasterPD101
 // @Produce json
-// @Param        id              path      int     true  "id"
+// @Param        id              path      string     true  "id"
 // @Param        vt              query     string  false  "vt"
 // @Security BearerAuth
 // @Success 200
