@@ -21,7 +21,7 @@ var table string = "marital_status"
 // @Produce json
 // @Security BearerAuth
 // @Success 200 {array} model.CommonSetup
-// @Router /api/lookup/marital_statuses [get]
+// @Router /api/lookup/marital-statuses [get]
 func LookupList(c *fiber.Ctx) error {
 	_, _, err := middleware.ValidateToken(c)
 	if err != nil {
@@ -45,7 +45,7 @@ func LookupList(c *fiber.Ctx) error {
 // @Param        sort               query      string  false  "sort"
 // @Security BearerAuth
 // @Success 200 {array} model.CommonSetup
-// @Router /api/marital_statuses [get]
+// @Router /api/marital-statuses [get]
 func List(c *fiber.Ctx) error {
 	page := c.Query("_page", "1")
 	limit := c.Query("_limit", "20")
@@ -88,7 +88,7 @@ func List(c *fiber.Ctx) error {
 // @Param        request  body       dto.KeywordDto true   "Search Request"
 // @Security BearerAuth
 // @Success 200 {array} model.CommonSetup
-// @Router /api/marital_statuses [post]
+// @Router /api/marital-statuses [post]
 func SearchList(c *fiber.Ctx) error {
 	page := c.Query("_page", "1")
 	limit := c.Query("_limit", "20")
@@ -134,7 +134,7 @@ func SearchList(c *fiber.Ctx) error {
 // @Param        request  body       dto.CommonSetupDto true   "Create City Request"
 // @Security BearerAuth
 // @Success 200
-// @Router /api/marital_status [post]
+// @Router /api/marital-status [post]
 func Create(c *fiber.Ctx) error {
 	_, user, err := middleware.ValidateToken(c)
 	if err != nil {
@@ -174,7 +174,7 @@ func Create(c *fiber.Ctx) error {
 // @Param        id              path      int  true  "id"
 // @Security BearerAuth
 // @Success 200 {object} model.CommonSetup
-// @Router /api/marital_status/{id} [get]
+// @Router /api/marital-status/{id} [get]
 func Edit(c *fiber.Ctx) error {
 	ids := c.Params("id")
 	id, _ := strconv.Atoi(ids)
@@ -198,7 +198,7 @@ func Edit(c *fiber.Ctx) error {
 // @Param        request         body      dto.CommonSetupDto true  "Update City Request"
 // @Security BearerAuth
 // @Success 200
-// @Router /api/marital_status/{id} [put]
+// @Router /api/marital-status/{id} [put]
 func Update(c *fiber.Ctx) error {
 	ids := c.Params("id")
 	id, _ := strconv.Atoi(ids)
@@ -247,7 +247,7 @@ func Update(c *fiber.Ctx) error {
 // @Param        id              path      int                true  "id"
 // @Security BearerAuth
 // @Success 200
-// @Router /api/marital_status/{id} [delete]
+// @Router /api/marital-status/{id} [delete]
 func Delete(c *fiber.Ctx) error {
 	ids := c.Params("id")
 	id, _ := strconv.Atoi(ids)
