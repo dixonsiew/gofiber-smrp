@@ -339,7 +339,7 @@ func Xlsx(c *fiber.Ctx) error {
     }
 
     facilityCode := config.Config("facilityCode")
-    filename := fmt.Sprintf("%s_%s_%s_%s.xlsx",facilityCode, ds1, ds2, pf)
+    filename := fmt.Sprintf("%s_%s_%s_%s.xlsx", facilityCode, ds1, ds2, pf)
     bx, err := u.GetXlsx(COLUMN_MAP, lx)
     if err != nil {
         u.LogError(err)
