@@ -3847,7 +3847,7 @@
                 ],
                 "parameters": [
                     {
-                        "type": "integer",
+                        "type": "string",
                         "description": "id",
                         "name": "id",
                         "in": "path",
@@ -4062,7 +4062,7 @@
                 ],
                 "parameters": [
                     {
-                        "type": "integer",
+                        "type": "string",
                         "description": "id",
                         "name": "id",
                         "in": "path",
@@ -4271,7 +4271,7 @@
                 ],
                 "parameters": [
                     {
-                        "type": "integer",
+                        "type": "string",
                         "description": "id",
                         "name": "id",
                         "in": "path",
@@ -4532,7 +4532,7 @@
                 ],
                 "parameters": [
                     {
-                        "type": "integer",
+                        "type": "string",
                         "description": "id",
                         "name": "id",
                         "in": "path",

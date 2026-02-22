@@ -3854,7 +3854,7 @@ const docTemplate = `{
                 ],
                 "parameters": [
                     {
-                        "type": "integer",
+                        "type": "string",
                         "description": "id",
                         "name": "id",
                         "in": "path",
@@ -4069,7 +4069,7 @@ const docTemplate = `{
                 ],
                 "parameters": [
                     {
-                        "type": "integer",
+                        "type": "string",
                         "description": "id",
                         "name": "id",
                         "in": "path",
@@ -4278,7 +4278,7 @@ const docTemplate = `{
                 ],
                 "parameters": [
                     {
-                        "type": "integer",
+                        "type": "string",
                         "description": "id",
                         "name": "id",
                         "in": "path",
@@ -4539,7 +4539,7 @@ const docTemplate = `{
                 ],
                 "parameters": [
                     {
-                        "type": "integer",
+                        "type": "string",
                         "description": "id",
                         "name": "id",
                         "in": "path",

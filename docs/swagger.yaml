@@ -2421,7 +2421,7 @@ paths:
         in: path
         name: id
         required: true
-        type: integer
+        type: string
       - description: vt
         in: query
         name: vt
@@ -2550,7 +2550,7 @@ paths:
         in: path
         name: id
         required: true
-        type: integer
+        type: string
       - description: Update Request
         in: body
         name: request
@@ -2675,7 +2675,7 @@ paths:
         in: path
         name: id
         required: true
-        type: integer
+        type: string
       - description: Update Request
         in: body
         name: request
@@ -2832,7 +2832,7 @@ paths:
         in: path
         name: id
         required: true
-        type: integer
+        type: string
       - description: vt
         in: query
         name: vt
