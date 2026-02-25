@@ -381,6 +381,7 @@ func UpdateLastLogin(id int) error {
 func UpdatePassword(o model.User) error {
     pw := []byte(o.Password)
     pwd, err := bcrypt.GenerateFromPassword(pw, bcrypt.DefaultCost)
+    pws := string(pwd)
     if err != nil {
         utils.LogError(err)
         return err
@@ -393,7 +394,7 @@ func UpdatePassword(o model.User) error {
     }
 
     q := `update app_user set password = $1 where id = $2`
-    _, err = db.Exec(database.GetCtx(), q, pwd, o.Id)
+    _, err = db.Exec(database.GetCtx(), q, pws, o.Id)
     if err != nil {
         utils.LogError(err)
         return err
