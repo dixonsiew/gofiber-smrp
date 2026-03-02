@@ -108,7 +108,7 @@ func SearchList(c *fiber.Ctx) error {
 //
 // @Tags Setup/User
 // @Produce json
-// @Param        request  body       dto.CommonSetupDto true   "Create User Request"
+// @Param        request  body       dto.UserDto true   "Create User Request"
 // @Security BearerAuth
 // @Success 200
 // @Router /api/user [post]
@@ -183,7 +183,7 @@ func Edit(c *fiber.Ctx) error {
 // @Tags Setup/User
 // @Produce json
 // @Param        id              path      int                true  "id"
-// @Param        request         body      dto.CommonSetupDto true  "Update User Request"
+// @Param        request         body      dto.UserDto true  "Update User Request"
 // @Security BearerAuth
 // @Success 200
 // @Router /api/user/{id} [put]
